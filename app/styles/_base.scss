@@ -1,0 +1,86 @@
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @extend html;
+    font-size: 12px;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #828282;
+}
+
+.container{
+    &-body {
+        width: 960px;
+        padding: 20px;
+        min-height: 500px;
+        margin: 80px auto 0;
+    }
+}
+
+header {
+    padding: 20px 10px;
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.well {
+    margin: 20px 10px 0 40px;
+}
+
+.search {
+    margin-right: 25px;
+    margin-top: 30px;
+}
+
+#main-wrapper {
+    margin: 0 auto;
+    width: 1000px;
+    background-color: #fff;
+}
+
+.panel {
+    width: 920px;
+}
+
+#add-container {
+    width: 920px;
+    margin-top: 20px;
+}
+
+label.checkbox-inline {
+    padding-left: 8px;
+    margin-top: -5px;
+}
+
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    position: relative;
+    margin-left: -14px;
+}
+
+.new-row.ng-hide-remove {
+    animation: 0.75s fadeIn ease;
+}
+
+.slideDown {
+    animation: 0.5s slideInDown ease;
+}
+
+.slideUp {
+    animation: 0.5s slideInUp ease;
+}

@@ -1,0 +1,83 @@
+<div class="row" id="main-wrapper">
+    <header>
+        <div>
+            <h4>School Classroom</h4>
+        </div>
+    </header>
+    <!-- select theme -->
+    <div class="well well-sm pull-left">
+        <form class="form-inline">
+            <div class="form-group">
+                <label>Choose Theme</label>
+                <select class="form-control" ng-model="theme" ng-options="theme.value as theme.name for theme in themes">
+                </select>
+            </div>
+        </form>
+    </div>
+    <!-- search box -->
+    <form action="" class="navbar-form navbar-right search">
+        <div class="input-group">
+            <input type="Search" placeholder="Search..." class="form-control" />
+            <div class="input-group-btn">
+                <button class="btn btn-info">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </div>
+        </div>
+    </form>
+    <!-- main content -->
+    <div class="container-body">
+        <div class="panel panel-default">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="chkbox"></th>
+                        <th>ID</th>
+                        <th>Grade Level</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in studentInfo track by $index | orderBy:'grade'">
+                        <td>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="item.Selected" ng-click="checked(item)">
+                            </label>
+                        </td>
+                        <td>{{item.id}}</td>
+                        <td>{{item.grade}}</td>
+                        <td>{{item.firstname}}</td>
+                        <td>{{item.lastname}}</td>
+                        <td>{{item.email}}</td>
+                    </tr>
+                    <tr ng-show="addRow" class="new-row">
+                        <td> </td>
+                        <td>
+                            <input type="text" ng-model="item.id" />
+                        </td>
+                        <td>
+                            <input type="text" ng-model="item.grade" />
+                        </td>
+                        <td>
+                            <input type="text" ng-model="item.firstname" />
+                        </td>
+                        <td>
+                            <input type="text" ng-model="item.lastname" />
+                        </td>
+                        <td>
+                            <input type="text" ng-model="item.email" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="add-container" ng-show="showButtons">
+            <button ng-click="add()" ng-hide="displaySave">Add New Student</button>
+            <button ng-click="save()" ng-show="displaySave">Save</button>
+            <button ng-click="cancel()" class="cancel-btn" ng-show="displaySave">Cancel</button>
+            <button class="pull-right" ng-click="delete($index)">Delete Checked</button>
+        </div>
+    </div>
+</div>

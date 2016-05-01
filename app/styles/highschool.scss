@@ -1,0 +1,65 @@
+body {
+    background-color: #63AAE4;
+}
+
+header {
+    p {
+        color: #9FA0AC;
+    }
+}
+
+h4 {
+    color: #2D71A9;
+}
+
+.table {
+    table-layout: fixed;
+    .chkbox {
+        width: 40px;
+    }
+    .ext {
+        width: 60px;
+    }
+    .new-row input {
+        width: 100%;
+    }
+    & > thead > tr > th {
+        color: #4BA9DF;
+        padding: 10px 10px 10px 18px;
+        font-size: 14px;
+    }
+    & > tbody > tr > td {
+        padding: 12px 10px 5px 20px;
+        word-wrap: break-word;
+    }
+}
+
+button {
+    color: #FCFCFC;
+    background-color: #2D71A9;
+    border: none;
+    font-size: 12px;
+    padding: 7px 17px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    &:hover {
+        color: #fff;
+        background-color: #1297E6;
+        outline: none;
+        text-decoration: none;
+    }
+    &.cancel-btn {
+        background-color: #B3B2B2;
+        margin-left: 20px;
+        &:hover {
+            background-color: #A2A0A0;
+        }
+    }
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #2D71A9;
+    border-color: #2D71A9;
+}

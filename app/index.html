@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="students">
+    <head>
+        <meta charset="utf-8">
+        <title>School Classroom</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="styles/animate.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" ng-href="styles/{{themes}}.scss">
+
+        <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+        <div class="container">
+            <div ng-view=""></div>
+        </div>
+
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+        <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/mainCtrl.js"></script>
+        <script src="scripts/services/mainSvcs.js"></script>
+
+    </body>
+</html>

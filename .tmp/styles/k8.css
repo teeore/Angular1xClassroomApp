@@ -1,0 +1,79 @@
+/* line 1, ../../app/styles/k8.scss */
+body {
+  background-color: #39ABA6;
+}
+
+/* line 6, ../../app/styles/k8.scss */
+header p {
+  color: #9FA0AC;
+}
+
+/* line 11, ../../app/styles/k8.scss */
+h4 {
+  color: #237774;
+}
+
+/* line 15, ../../app/styles/k8.scss */
+.table {
+  table-layout: fixed;
+}
+/* line 17, ../../app/styles/k8.scss */
+.table .chkbox {
+  width: 40px;
+}
+/* line 20, ../../app/styles/k8.scss */
+.table .ext {
+  width: 60px;
+}
+/* line 23, ../../app/styles/k8.scss */
+.table .new-row input {
+  width: 100%;
+}
+/* line 26, ../../app/styles/k8.scss */
+.table > thead > tr > th {
+  color: #23827D;
+  padding: 10px 10px 10px 18px;
+  font-size: 14px;
+}
+/* line 31, ../../app/styles/k8.scss */
+.table > tbody > tr > td {
+  padding: 12px 10px 5px 20px;
+  word-wrap: break-word;
+}
+
+/* line 37, ../../app/styles/k8.scss */
+button {
+  color: #FCFCFC;
+  background-color: #23827D;
+  border: none;
+  font-size: 12px;
+  padding: 7px 17px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+/* line 46, ../../app/styles/k8.scss */
+button:hover {
+  color: #fff;
+  background-color: #39ABA6;
+  outline: none;
+  text-decoration: none;
+}
+/* line 52, ../../app/styles/k8.scss */
+button.cancel-btn {
+  background-color: #B3B2B2;
+  margin-left: 20px;
+}
+/* line 55, ../../app/styles/k8.scss */
+button.cancel-btn:hover {
+  background-color: #A2A0A0;
+}
+
+/* line 61, ../../app/styles/k8.scss */
+.btn-info {
+  color: #fff;
+  background-color: #23827D;
+  border-color: #23827D;
+}
+
+/*# sourceMappingURL=k8.css.map */

@@ -1,0 +1,25 @@
+[{
+    "id": "500",
+    "grade": "1st",
+    "firstname": "Annie",
+    "lastname": "Maria",
+    "email": "anne@mail.com"
+},{
+    "id": "205",
+    "grade": "5th",
+    "firstname": "Jack",
+    "lastname": "Anderson",
+    "email": "jack@mail.com"
+},{
+    "id": "634",
+    "grade": "3rd",
+    "firstname": "Julie",
+    "lastname": "Andrews",
+    "email": "julie@mail.com"
+},{
+    "id": "101",
+    "grade": "1st",
+    "firstname": "David",
+    "lastname": "Peters",
+    "email": "david@mail.com"
+}]
