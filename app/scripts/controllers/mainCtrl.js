@@ -151,7 +151,11 @@ angular.module('students')
             $scope.showTable = true;
             if ($scope.searchText) {
                 $scope.searchText = '';
-            } 
+            } else if ($scope.gradeLevel.grade || $scope.gradeLevel.grade == null) {
+                $scope.gradeLevel.grade = function() {
+                    return;
+                };
+            }
         }
     }]);
 

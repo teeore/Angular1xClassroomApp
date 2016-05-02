@@ -14,6 +14,19 @@
             </div>
         </form>
     </div>
+
+    <!-- filter by grade -->
+     <div class="well well-sm pull-left grade-box">
+        <form class="form-inline">
+            <div class="form-group">
+                <!-- <label>Select Grade</label> -->
+                <select class="form-control" ng-model="gradeLevel.grade" ng-options="gradeLevel for gradeLevel in gradeLevels" ng-change="gradeChange()">
+                <option value="">-Select grade-</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
     <!-- search box -->
     <form action="" class="navbar-form navbar-right search">
         <div class="input-group">
@@ -42,7 +55,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="table-results" ng-repeat="item in studentInfo | filter: gradeFilter | filter:searchText">
+                    <tr class="table-results" ng-repeat="item in studentInfo | filter: gradeFilter | filter:searchText | filter:gradeLevel:true">
                         <td>
                             <label class="checkbox-inline">
                                 <input type="checkbox" ng-model="item.Selected" ng-click="checked(item)">
