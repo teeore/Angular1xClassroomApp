@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="students">
+<html ng-app="students" ng-controller="MainCtrl">
     <head>
         <meta charset="utf-8">
         <title>School Classroom</title>
@@ -8,12 +8,10 @@
 
         <link rel="stylesheet" href="styles/animate.css">
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" ng-href="styles/{{themes}}.scss">
-
         <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
 
-    <body>
+    <body ng-class="selectTheme('body')">
         <div class="container">
             <div ng-view=""></div>
         </div>

@@ -11,7 +11,7 @@ body {
     font-size: 12px;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
-    color: #828282;
+    color: #4E4B4B;
 }
 
 .container{
@@ -27,6 +27,9 @@ header {
     padding: 20px 10px;
     height: 70px;
     border-bottom: 1px solid #ccc;
+     p {
+        color: #9FA0AC;
+    }
 }
 
 h4 {
@@ -51,10 +54,46 @@ h4 {
     margin: 0 auto;
     width: 1000px;
     background-color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 6px 0 20px -4px #566571, -6px 0 20px -4px #566571;
 }
 
 .panel {
     width: 920px;
+}
+
+.table {
+    table-layout: fixed;
+    .chkbox {
+        width: 40px;
+    }
+    .ext {
+        width: 60px;
+    }
+    .new-row input {
+        width: 100%;
+    }
+    & > thead > tr > th {
+        padding: 10px 10px 10px 18px;
+        font-size: 14px;
+    }
+    & > tbody > tr > td {
+        padding: 12px 10px 5px 20px;
+        word-wrap: break-word;
+    }
+}
+
+.theme-label {
+    font-size: 12px;
+    margin-top: 7px;
+    display: inline-block;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.form-control {
+    font-size: 13px;
 }
 
 .grade-box {
@@ -75,6 +114,28 @@ label.checkbox-inline {
 .checkbox-inline input[type="checkbox"] {
     position: relative;
     margin-left: -14px;
+}
+
+button {
+    color: #FFF;
+    border: none;
+    font-size: 12px;
+    padding: 7px 17px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    &:hover {
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+    }
+    &.cancel-btn {
+        background-color: #B3B2B2;
+        margin-left: 20px;
+        &:hover {
+            background-color: #A2A0A0;
+        }
+    }
 }
 
 .new-row.ng-hide-remove {

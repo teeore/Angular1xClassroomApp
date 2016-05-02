@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('students')
-    .controller('MainCtrl', ['$scope', 'MainSvc', 'localStorageService', function($scope, MainSvc, localStorageService) {
+    .controller('MainCtrl', ['$rootScope', '$scope', 'MainSvc', 'localStorageService', function($rootScope, $scope, MainSvc, localStorageService) {
         var getLocalStorage = localStorageService.get('students');
         var addContainer = angular.element(document.querySelector('#add-container'))
 
@@ -16,7 +16,7 @@ angular.module('students')
             $scope.showButtons = true;
         }
 
-        // // check if there are any results
+        // check if there are any results
         $scope.gradeChange = function() {
             if ($('.table-results').length) {
                 $scope.showTable = true;
@@ -86,14 +86,38 @@ angular.module('students')
 
         // list of themes to switch
         $scope.themes = [
-            { name: 'K-8', value: 'k8' },
+            { name: 'K-8', value: 'K8' },
             { name: 'High School', value: 'highschool' }
         ]
 
-        // default theme
-        $scope.theme = 'k8';
+        // default theme & header
+        $scope.theme = 'K8';
+        $scope.themeHeader = 'K8';
 
+        $scope.switchHeader = function() {
+            if ($scope.theme == 'highschool') {
+                $scope.themeHeader = 'high school';
+                // $scope.layout = 'highschool';
+            } else {
+                $scope.themeHeader = 'k8';
+                // $scope.layout = 'K8'
+
+            }
+        }
+
+        $scope.selectTheme = function(elem) {
+            if ($scope.theme=='K8') {
+                return 'k8-' + elem;
+            } else {
+                return 'highschool-' + elem;
+            }
+        };
 
         // filter by grade
-        $scope.gradeLevels = ['All', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+        // $scope.gradeLevels = [];
+        
+        // for (var i = 1;i <=12; i++) {
+        //     $scope.gradeLevels.push(i);
+        // }
+        $scope.gradeLevels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
     }]);

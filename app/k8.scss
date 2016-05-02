@@ -1,0 +1,32 @@
+body {
+    background-color: #39ABA6;
+}
+
+header {
+    p {
+        color: #9FA0AC;
+    }
+}
+
+h4 {
+    color: #237774;
+}
+
+.table {
+    & > thead > tr > th {
+        color: #23827D;
+    }
+}
+
+button {
+    background-color: #23827D;
+    &:hover {
+        background-color: #39ABA6;
+    }
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #23827D;
+    border-color: #23827D;
+}

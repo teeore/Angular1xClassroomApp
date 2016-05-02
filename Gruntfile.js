@@ -195,7 +195,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('serve', [
         'clean:server',
-        //'concurrent:server',
+        'compass',
         'connect:livereload',
         'watch'
     ]);
@@ -203,7 +203,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('test', [
         'clean:server',
-        //'concurrent:test',
         'connect:test',
         'karma'
     ]);

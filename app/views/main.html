@@ -1,15 +1,16 @@
 <div class="row" id="main-wrapper">
     <header>
         <div>
-            <h4>School Classroom</h4>
+            <h4 ng-class="selectTheme('h4')">School Classroom - {{themeHeader}}</h4>
         </div>
     </header>
+
     <!-- select theme -->
     <div class="well well-sm pull-left">
         <form class="form-inline">
             <div class="form-group">
-                <label>Choose Theme</label>
-                <select class="form-control" ng-model="theme" ng-options="theme.value as theme.name for theme in themes">
+                <label class="theme-label">Choose Theme</label>
+                <select class="form-control" ng-model="theme" ng-options="theme.value as theme.name for theme in themes" ng-change="switchHeader()" >
                 </select>
             </div>
         </form>
@@ -21,7 +22,7 @@
             <div class="form-group">
                 <!-- <label>Select Grade</label> -->
                 <select class="form-control" ng-model="gradeLevel.grade" ng-options="gradeLevel for gradeLevel in gradeLevels" ng-change="gradeChange()">
-                <option value="">-- Select grade--</option>
+                <option value="">-Select grade-</option>
                 </select>
             </div>
         </form>
@@ -32,7 +33,7 @@
         <div class="input-group">
             <input type="Search" placeholder="Search..." class="form-control" ng-model="searchText" />
             <div class="input-group-btn">
-                <button class="btn btn-info">
+                <button  ng-class="selectTheme('search')" class="btn btn-info">
                     <span class="glyphicon glyphicon-search"></span>
                 </button>
             </div>
@@ -42,13 +43,13 @@
     <!-- main content -->
     <div class="container-body">
 
-   <div> No results</div>
-
+<!--    <div>No results</div>
+ -->
 
         <div class="panel panel-default">
             <table class="table table-striped table-bordered" id="searchResults" >
                 <thead>
-                    <tr>
+                    <tr ng-class="selectTheme('th')">
                         <th class="chkbox"></th>
                         <th>ID</th>
                         <th>Grade Level</th>
@@ -92,10 +93,10 @@
             </table>
         </div>
         <div id="add-container" ng-show="showButtons">
-            <button ng-click="add()" ng-hide="displaySave">Add New Student</button>
-            <button ng-click="save()" ng-show="displaySave">Save</button>
+            <button ng-class="selectTheme('button')" ng-click="add()" ng-hide="displaySave">Add New Student</button>
+            <button  ng-class="selectTheme('button')" ng-click="save()" ng-show="displaySave">Save</button>
             <button ng-click="cancel()" class="cancel-btn" ng-show="displaySave">Cancel</button>
-            <button class="pull-right" ng-click="delete($index)">Delete Checked</button>
+            <button  ng-class="selectTheme('button')" class="pull-right" ng-click="delete($index)">Delete Checked</button>
         </div>
     </div>
 </div>
