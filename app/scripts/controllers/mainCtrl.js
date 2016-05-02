@@ -16,6 +16,19 @@ angular.module('students')
             $scope.showButtons = true;
         }
 
+        $scope.gradeFilter = function(item) {
+            if ($scope.theme == 'K8') {
+                return item.grade <= 8;
+            } else {
+                return item.grade >= 9;
+            }
+        }
+
+        // default theme
+
+        $scope.theme = 'K8';
+        $scope.themeHeader = 'K8';
+
         // check if there are any results
         $scope.showTable = true;
         $scope.gradeChange = function() {
@@ -94,10 +107,7 @@ angular.module('students')
             { name: 'High School', value: 'highschool' }
         ]
 
-        // default theme & header
-        $scope.theme = 'K8';
-        $scope.themeHeader = 'K8';
-
+        // switch theme
         $scope.switchHeader = function() {
             if ($scope.theme == 'highschool') {
                 $scope.themeHeader = 'high school';
@@ -108,31 +118,40 @@ angular.module('students')
 
         $scope.selectTheme = function(elem) {
             if ($scope.theme == 'K8') {
+                $scope.initKGrades();
                 $scope.$emit('themeChanged', 'K8');
                 return 'k8-' + elem;
             } else {
+                $scope.initHSGrades();
+                $scope.gradeLevels = $scope.gradeArr.map(String);
                 $scope.$emit('themeChanged', 'highschool');
                 return 'highschool-' + elem;
             }
         };
 
-        // filter by grade
-        $scope.gradeArr = [];
 
-        for (var i = 1; i <= 12; i++) {
-            $scope.gradeArr.push(i);
+        $scope.initKGrades = function() {
+            $scope.gradeArr = [];
+            for (var i = 1; i <= 8; i++) {
+                $scope.gradeArr.push(i);
+            }
+            $scope.gradeLevels = $scope.gradeArr.map(String);
         }
-        $scope.gradeLevels = $scope.gradeArr.map(String);
+
+        $scope.initHSGrades = function() {
+            $scope.gradeArr = [];
+            for (var i = 9; i <= 12; i++) {
+                $scope.gradeArr.push(i);
+            }
+            $scope.gradeLevels = $scope.gradeArr.map(String);
+        }
 
         // clear filters
         $scope.clearFilters = function() {
             $scope.showTable = true;
             if ($scope.searchText) {
                 $scope.searchText = '';
-            } else if ($scope.gradeLevel.grade || $scope.gradeLevel.grade == null) {
-                $scope.gradeLevel.grade = function() {
-                    return; };
-            }
+            } 
         }
     }]);
 
