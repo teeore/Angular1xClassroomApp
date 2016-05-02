@@ -42,12 +42,14 @@
 
     <!-- main content -->
     <div class="container-body">
+        <a href="" class="clear-filters" ng-click="clearFilters()">Show All Students</a>
 
-<!--    <div>No results</div>
- -->
 
-        <div class="panel panel-default">
-            <table class="table table-striped table-bordered" id="searchResults" >
+   <div ng-hide="showTable" class="no-results">No results</div>
+
+
+        <div class="panel panel-default" ng-show="showTable">
+            <table class="table table-striped table-bordered" id="searchResults">
                 <thead>
                     <tr ng-class="selectTheme('th')">
                         <th class="chkbox"></th>

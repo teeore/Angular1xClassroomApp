@@ -96,8 +96,23 @@ h4 {
     font-size: 13px;
 }
 
+a.clear-filters {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 15px;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 .grade-box {
     margin-left: 170px;
+}
+
+.no-results {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 #add-container {
