@@ -16,6 +16,17 @@ angular.module('students')
             $scope.showButtons = true;
         }
 
+        // // check if there are any results
+        $scope.gradeChange = function() {
+            if ($('.table-results').length) {
+                $scope.showTable = true;
+                console.log('true')
+            } else {
+                $scope.showTable = false;
+                console.log('false')
+            }
+        }
+
         // array to hold checked students
         $scope.checkedStudents = [];
 
@@ -51,11 +62,17 @@ angular.module('students')
             $scope.displaySave = false;
             if ($scope.item) {
                 $scope.studentInfo.push($scope.item);
+                $scope.item.id = $scope.getUniqueId(100, 999);
                 localStorageService.set('students', $scope.studentInfo);
             }
             $scope.item = '';
             addContainer.removeClass('slideDown').addClass('slideUp');
         };
+
+        // generate unique ID
+        $scope.getUniqueId = function(min, max) {
+            return Math.floor(Math.random() * 899) + 100
+        }
 
         // cancel button
         $scope.cancel = function() {
@@ -66,17 +83,17 @@ angular.module('students')
         };
 
         //theme switcher
-        // default theme
-
 
         // list of themes to switch
         $scope.themes = [
-        {name: 'K-8', value: 'k8'},
-        {name: 'High School', value: 'highschool'}
+            { name: 'K-8', value: 'k8' },
+            { name: 'High School', value: 'highschool' }
         ]
 
+        // default theme
         $scope.theme = 'k8';
 
 
-
+        // filter by grade
+        $scope.gradeLevels = ['All', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
     }]);

@@ -1,25 +1,31 @@
 [{
     "id": "500",
-    "grade": "1st",
+    "grade": "1",
     "firstname": "Annie",
     "lastname": "Maria",
     "email": "anne@mail.com"
 },{
     "id": "205",
-    "grade": "5th",
+    "grade": "5",
     "firstname": "Jack",
     "lastname": "Anderson",
     "email": "jack@mail.com"
 },{
     "id": "634",
-    "grade": "3rd",
+    "grade": "3",
     "firstname": "Julie",
     "lastname": "Andrews",
     "email": "julie@mail.com"
 },{
     "id": "101",
-    "grade": "1st",
+    "grade": "1",
     "firstname": "David",
     "lastname": "Peters",
     "email": "david@mail.com"
+},{
+    "id": "150",
+    "grade": "12",
+    "firstname": "Daniel",
+    "lastname": "James",
+    "email": "daniel@mail.com"
 }]
